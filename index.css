@@ -1089,3 +1089,8 @@ footer {
 
     
 }
+.footer .footerText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
