@@ -8,6 +8,15 @@
   text-decoration: none;
 }
 /* Utilities */
+#preloader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: white url("./Images/Giphy.gif") no-repeat center;
+    background-size: 50vh;
+    z-index: 111111111111111111;
+}
 .ContainerCenter {
   min-height: 90vh;
   display: flex;
@@ -68,6 +77,7 @@ nav {
   align-items: center;
   padding: 1% 7%;
   background: white;
+  z-index: 111111111111111;
 }
 #close,
 #menu,
@@ -107,7 +117,7 @@ nav .logo a:hover {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #283668;
-  transition: 1s;
+
 }
 nav a:hover {
   color: #2294ed;
@@ -122,6 +132,7 @@ nav a:hover {
   width: 100%;
   height: 0.3vh;
   background-color: #4285f4;
+  z-index: 11111111111;
 }
 
 /* For Mobile */
@@ -165,10 +176,11 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.6s;
     background-color: white;
-    overflow: hidden;
     padding: 2vh 0;
+    z-index: 111111111111111;
+    visibility: hidden;
+
   }
   .link #close {
     margin-left: 88%;
@@ -299,6 +311,7 @@ nav a:hover {
 @media (max-width: 768px) {
   .heroContainer {
     flex-direction: column;
+    z-index: -1;
   }
   .heroContent {
     width: 100%;
@@ -339,7 +352,6 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: -1;
 }
 .why-content {
   width: 40%;
@@ -543,6 +555,12 @@ nav a:hover {
     left: -10vw;
     top: -12vh;
   }
+  .green3 {
+    width: 14vw;
+    position: absolute;
+    right: -6.3vw;
+    bottom: -20vh;
+}
   .intiative {
     margin: 5vh 0;
   }
@@ -563,8 +581,6 @@ nav a:hover {
 /* initiative end */
 /* vision */
 
-.vision {
-}
 .vision h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -586,7 +602,7 @@ nav a:hover {
   position: relative;
   transition: 0.7s;
   border-top-color: #0f9d58 !important;
-  z-index: -1;
+
 }
 .blog_post:hover {
   background: linear-gradient(90deg, #ff9966, #ff5e62);
@@ -854,7 +870,7 @@ footer {
   padding: 50px 160px;
 }
 .logoContainer {
-  width: 10cm;
+  width: 27vw;
 }
 .logoContainer .logo a {
   display: flex;
@@ -881,9 +897,9 @@ footer {
   background-color: transparent;
 }
 .logoContainer h5 {
-  font-size: 1.1rem;
-  color: #17234d;
-  font-weight: 700;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
   margin-bottom: 15px;
   margin-top: 20px;
 }
@@ -892,8 +908,8 @@ footer {
   width: 5vw;
 }
 .footer .footerText {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 .logoContainer p {
@@ -902,14 +918,13 @@ footer {
 }
 .footer a {
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: #2e3243;
-  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #44494e;
   line-height: 45px;
 }
 .footer a:hover {
-  color: #2294ed;
+  color: #145b9a;
   transform: translateX(20px);
   transition: 1s;
 }
@@ -920,6 +935,9 @@ footer {
 .footer-link {
   display: flex;
   flex-direction: column;
+}
+.footer-link p{
+    font-weight: 600;
 }
 
 /* footer-socials */
@@ -944,28 +962,13 @@ footer {
   transition: 1.5s;
 }
 .social img {
-  width: 7%;
+  width: 2.2vw;
   height: auto;
 }
 .social p {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 20px;
-}
-.download-group {
-  width: 50%;
-}
-.download-images {
-  display: flex;
-  gap: 35px;
-  justify-content: center;
-}
-.download-images img {
-  width: 7%;
-}
-.download-images img:hover {
-  transform: rotate(360deg);
-  transition: 1.5s;
 }
 
 /* footer2 */
@@ -978,7 +981,7 @@ footer {
 .footer-2 a {
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
@@ -1016,6 +1019,9 @@ footer {
         font-weight: 500;
         gap: 0.1vw;
         font-size: 1rem;
+    }
+    .logoContainer {
+        width: 100%;
     }
     
     .logoContainer h5 {
@@ -1088,9 +1094,4 @@ footer {
     }
 
     
-}
-.footer .footerText {
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-bottom: 20px;
 }
