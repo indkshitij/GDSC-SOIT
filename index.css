@@ -1090,8 +1090,9 @@ footer {
     .footer-2 {
         display: flex;
         justify-content: space-around;
-        padding: 1.5vh 0vw;
+        padding: 1.5vh 0;
     }
 
+ 
     
 }
